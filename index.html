@@ -2,7 +2,28 @@
 <html>
   <head>
     <title>Webrtc</title>
-    <script src="/assets/app.js"></script>
+    <style>
+      video {
+        width: 100%;
+      }
+      #container {
+        position: relative;
+        display: inline-block;
+        width: 400px;
+      }
+      #my-video {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 100px;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div id="container">
+      <video id="guest-video" autoplay></video>
+      <video id="my-video" autoplay></video>
+    </div>
+  </body>
+  <script src="/assets/app.js"></script>
 </html>
