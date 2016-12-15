@@ -3,12 +3,15 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    app: path.resolve(__dirname, 'src/app.js')
+    app: path.resolve(__dirname, 'app.js')
   },
   output: {
-    path: path.resolve(__dirname, 'public/assets'),
+    path: path.resolve(__dirname, 'assets'),
     publicPath: '/assets/',
     filename: '[name].js'
+  },
+  devServer: {
+    contentBase: __dirname
   },
   module: {
     loaders: [
